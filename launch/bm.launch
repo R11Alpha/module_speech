@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Topics required by the basic module node -->
+	<param name="talk_topic" value="/pocket_listener/talk" type="str"/>
+	<param name="talk_status_topic" value="/pocket_listener/status" type="str"/>
+
+	<!-- Whisper parameters -->
+	<!--<param name="/module_speech/model_path" value="vad" type="str"/> --> <!-- vad or periodic -->
+	<!--<param name="/module_speech/listening_mode" value="$(find module_speech)/models/ggml-base.en.bin" type="str"/>
+	<param name="/module_speech/step_ms" type="int" value="2000" />
+	<param name="/module_speech/length_ms" type="int" value="10000" />
+	<param name="/module_speech/keep_ms" type="int" value="500" />
+	<param name="/module_speech/n_whisper_threads" type="int" value="2" />
+	<param name="/module_speech/voice_threshold" type="double" value="0.6" />-->
+
+	<!-- BM, bridge and mapping-switch nodes -->
+	<node pkg="module_speech" type="speech_basicmodule.py" name="module_speech" output="screen" respawn="false"/>
+	<node pkg="module_speech" type="whisperscript.py" name="whisperscript" output="screen" respawn="false"/>
+</launch>
