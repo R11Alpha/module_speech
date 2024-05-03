@@ -1,10 +1,10 @@
-<em> Voice Module </em>
+# Voice Module
 
-# Table of Contents
+## Table of Contents
+1.[Offline Whisper](#offline-whisper)
 
-<a name="Offline Whisper"></a>
-
-## Offline Whisper
+<a name="offline-whisper"></a>
+### Offline Whisper
 
 To use Whisper in a computer without internet connection we need to follow the next steps:
 
