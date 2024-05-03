@@ -2,4 +2,4 @@
 
 To use Whisper in a computer without internet connection we need to follow the next steps:
 
-''' Download the required files'''
+- ```checkamplitude:``` is in charge of detecting amplitudes over a determined threshold, and silences longer than an established duration. 
