@@ -1,5 +1,11 @@
-#Offline Whisper
+<em> Voice Module </em>
+
+# Table of Contents
+
+<a name="Offline Whisper"></a>
+
+## Offline Whisper
 
 To use Whisper in a computer without internet connection we need to follow the next steps:
 
-- ```checkamplitude:``` is in charge of detecting amplitudes over a determined threshold, and silences longer than an established duration. 
+- ```Download the necessary files:```
