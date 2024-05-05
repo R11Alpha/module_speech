@@ -19,41 +19,41 @@ Este script funciona con ROS Noetic que esta corriendo en nuestra computadora co
 
 - Configurar el ordenador para que acepte software de packages.ros.org.
 
-    sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+        sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
 - Configurar las keys de Ubuntu
 
-    sudo apt install curl # if you haven't already installed curl
+        sudo apt install curl # if you haven't already installed curl
 
-    curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+        curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 
 - Actualizar los paquetes de Ubuntu:
 
-    sudo apt update
+        sudo apt update
 
 - Instalar ROS Desktop-Full Install
 
-    sudo apt install ros-noetic-desktop-full
+        sudo apt install ros-noetic-desktop-full
 
 - Configurar el ambiente de nuestra computadora para poder utilizar los comandos de ROS
 
-    source /opt/ros/noetic/setup.bash
+        source /opt/ros/noetic/setup.bash
 
-    echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+        echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 
-    source ~/.bashrc
+        source ~/.bashrc
 
 - Instalar paquetes de ROS
 
-    sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+        sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 
 - Inicializar rosdep
 
-    sudo apt install python3-rosdep
+        sudo apt install python3-rosdep
 
-    sudo rosdep init
+        sudo rosdep init
 
-    rosdep update
+        rosdep update
 
 <a name="entorno-conda"></a>
 ### Entorno Conda
