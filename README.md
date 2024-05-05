@@ -63,4 +63,4 @@ Hay que recordar que mientras mas grande sea el modelo a utilizar mucho mayor se
 
 - ```Implementar los modelos descargados en nuestro codigo y en nuestras librerias:``` En este caso primero sustituiremos los links que estan en el archivo de ```openai_public.py``` por el directorio en donde se encuentran los archivos ```encoder.json``` y ```vocab.bpe``` (Una recomendación es poner los archivos descargados dentro de la carpeta de whisper para tener un orden y no sea tan complicado buscar los archivos).
 
-
+![](https://github.com/R11Alpha/module_speech/blob/main/Resources/tik.gif)
