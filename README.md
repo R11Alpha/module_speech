@@ -2,14 +2,65 @@
 
 ## Contenido
 1. [Concepto](#concepto)
-2. [Librerías](#librerias)
-3. [Offline Whisper](#offline-whisper)
-4. [Entorno Conda](#entorno-conda)
+2. [ROS Noetic](#ros)
+2. [Entorno Conda](#entorno-conda)
+3. [Librerías](#librerias)
+4. [Whisper Offline](#offline-whisper)
 
 <a name="concepto"></a>
 ### Concepto
 
 Este script funciona como un modulo básico del robot de servicio Markovito. Esta diseñado para que el script funcione como el dispositivo Alexa en donde el usuario mande a llamar al script con una palabra clave y el robot pueda avisar al usuario por medio de otro modulo que esta almacenado en la unidad abordo del robot llamado ```/pocket_listener/talk``` mandando un mensaje de formato String a este modulo para que diga las palabras "yes" para avisar que ya esta grabando y "ok" para avisar que ya dejo de grabar. Igualmente el script de whisper manda la información a otro script que procesa el texto crudo que obtiene de la voz al script ```speech_basicmodule.py``` para que pueda saber que texto es considerado un comando de stop, o un comando con complejidad para que el robot pueda hacer las actividades dictadas por el usuario.
+
+<a name="ros"></a>
+### ROS Noetic
+
+Este script funciona con ROS Noetic que esta corriendo en nuestra computadora con Ubuntu 20.04. Para poder instalar ROS necesitamos seguir los siguientes comandos que podemos en la [Wiki de ROS](http://wiki.ros.org/noetic/Installation/Ubuntu):
+
+    - Configurar el ordenador para que acepte software de packages.ros.org.
+
+        sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+    - Configurar las keys de Ubuntu
+
+        sudo apt install curl # if you haven't already installed curl
+
+        curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+
+    - Actualizar los paquetes de Ubuntu:
+
+        sudo apt update
+
+    - Instalar ROS Desktop-Full Install
+
+        sudo apt install ros-noetic-desktop-full
+
+    - Configurar el ambiente de nuestra computadora para poder utilizar los comandos de ROS
+
+        source /opt/ros/noetic/setup.bash
+
+        echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+
+        source ~/.bashrc
+
+    - Instalar paquetes de ROS
+
+        sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+
+    - Inicializar rosdep
+
+        sudo apt install python3-rosdep
+
+        sudo rosdep init
+
+        rosdep update
+
+<a name="entorno-conda"></a>
+### Entorno Conda
+
+Para poder correr este script necesitamos instalar Conda para poder crear un entorno de python que funcione con la versión 3.9 para poder correr todos las librerías que se tienen que descargar, al momento de hacer también cambian los lugares en donde se guardan las librerías entonces hay que entrar a los archivos de conda para hacer todo el procedimiento de utilizar whisper de manera completamente offline. Igualmente, para poder utilizar el script necesitamos instalar unos paquetes de ROS en nuestro entorno-conda.
+
+        pip install rospkg
 
 <a name="librerias"></a>
 ### Librerías
@@ -110,6 +161,7 @@ Hay que recordar que mientras mas grande sea el modelo a utilizar mucho mayor se
 
 ![](https://github.com/R11Alpha/module_speech/blob/main/Resources/tik.gif)
 
-<a name="entorno-conda"></a>
-### Entorno Conda
+    En el código tenemos que agregar el directorio en donde se encuentra el modelo a utilizar que descargamos anteriormente.
+
+![](https://github.com/R11Alpha/module_speech/blob/main/Resources/path.gif)
 
