@@ -55,7 +55,13 @@ Una vez encontrados los archivos ya podras descargar los modelos que se encuentr
 
 Hay que recordar que mientras mas grande sea el modelo a utilizar mucho mayor será el uso de recursos computacionales que tendra que usar.
 
-![](https://github.com/R11Alpha/module_speech/blob/main/Resources/recursos.png  )
+|  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed |
+|:------:|:----------:|:------------------:|:------------------:|:-------------:|:--------------:|
+|  tiny  |    39 M    |     `tiny.en`      |       `tiny`       |     ~1 GB     |      ~32x      |
+|  base  |    74 M    |     `base.en`      |       `base`       |     ~1 GB     |      ~16x      |
+| small  |   244 M    |     `small.en`     |      `small`       |     ~2 GB     |      ~6x       |
+| medium |   769 M    |    `medium.en`     |      `medium`      |     ~5 GB     |      ~2x       |
+| large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
 
 - ```Descargar "vocab.bpe" y encoder.json:``` Estos modelos son los que se descargan para el archivo ```openai_public.py``` y se pueden descargar de los siguientes links:
 
