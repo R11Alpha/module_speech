@@ -13,6 +13,16 @@ Este script funciona como un modulo básico del robot de servicio Markovito. Est
 <a name="librerias"></a>
 ### Librerías
 
+- ```Whisper AI:``` Para instalar esta librería hay que copiar y pegar estos comandos en la terminal de Ubuntu.
+
+    $ pip install -U openai-whisper
+
+    $ pip install git+https://github.com/openai/whisper.git
+
+    $ pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
+
+    $ sudo apt update && sudo apt install ffmpeg
+
 <a name="offline-whisper"></a>
 ### Offline Whisper
 
