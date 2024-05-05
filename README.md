@@ -8,6 +8,8 @@
 <a name="concepto"></a>
 ### Concepto
 
+Este script funciona como un modulo básico del robot de servicio Markovito. Esta diseñado para que el script funcione como el dispositivo Alexa en donde el usuario mande a llamar al script con una palabra clave y el robot pueda avisar al usuario por medio de otro modulo que esta almacenado en la unidad abordo del robot llamado ```/pocket_listener/talk``` mandando un mensaje de formato String a este modulo para que diga las palabras "yes" para avisar que ya esta grabando y "ok" para avisar que ya dejo de grabar. Igualmente el script de whisper manda la información a otro script que procesa el texto crudo que obtiene de la voz al script ```speech_basicmodule.py``` para que pueda saber que texto es considerado un comando de stop, o un comando con complejidad para que el robot pueda hacer las actividades dictadas por el usuario.
+
 <a name="librerias"></a>
 ### Librerías
 
@@ -16,7 +18,7 @@
 
 Para poder usar whisper completamente offline, se necesita descargar archivos necesarios que se pueden encontrar en las librerias que estan en el path de las librerías de python descargados. Tambien puedes descargar los archivos necesarios en este repositorio.
 
-- ```Descargar los arhivos desde "__init__.py" y "openai_public.py":``` Todos los archivos que se mencionan se encuentran en el directorio "/.local/lib/python3.X/site-packages".
+- ```Descargar los arhivos desde __init__.py y openai_public.py:``` Todos los archivos que se mencionan se encuentran en el directorio "/.local/lib/python3.X/site-packages".
 El archivo ```__init__.py``` se encuentra en la carpeta de Whisper:
 
 ![](https://github.com/R11Alpha/module_speech/blob/main/Resources/Whisper.gif)
@@ -72,3 +74,5 @@ Hay que recordar que mientras mas grande sea el modelo a utilizar mucho mayor se
 - ```Implementar los modelos descargados en nuestro codigo y en nuestras librerias:``` En este caso primero sustituiremos los links que estan en el archivo de ```openai_public.py``` por el directorio en donde se encuentran los archivos ```encoder.json``` y ```vocab.bpe``` (Una recomendación es poner los archivos descargados dentro de la carpeta de whisper para tener un orden y no sea tan complicado buscar los archivos).
 
 ![](https://github.com/R11Alpha/module_speech/blob/main/Resources/tik.gif)
+
+
