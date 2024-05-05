@@ -17,17 +17,17 @@
 Para poder usar whisper completamente offline, se necesita descargar archivos necesarios que se pueden encontrar en las librerias que estan en el path de las librerías de python descargados. Tambien puedes descargar los archivos necesarios en este repositorio.
 
 - ```Descargar los arhivos desde "__init__.py" y "openai_public.py":``` Todos los archivos que se mencionan se encuentran en el directorio "/.local/lib/python3.X/site-packages".
-El archivo "__init__.py" se encuentra en la carpeta de Whisper:
+El archivo ```__init__.py``` se encuentra en la carpeta de Whisper:
 
 ![](https://github.com/R11Alpha/module_speech/blob/main/Resources/Whisper.gif)
 
-El archivo "openai_public.py" se encuentra en la carpeta tiktoken_ext:
+El archivo ```openai_public.py``` se encuentra en la carpeta tiktoken_ext:
 
 ![](https://github.com/R11Alpha/module_speech/blob/main/Resources/Tiktoken.gif)
 
-Una vez encontrados los archivos ya podras descargar los modelos que se encuentran en estos archivos, en el "__init__.py" podremos encontrar los modelos que Whisper usa. En el archivo "openai_public.py" se encuentran los archivos "vocab.bpe" y "encoder.json" que son muy importantes para que whisper pueda funcionar de manera completamente offline.
+Una vez encontrados los archivos ya podras descargar los modelos que se encuentran en estos archivos, en el ```__init__.py``` podremos encontrar los modelos que Whisper usa. En el archivo ```openai_public.py``` se encuentran los archivos ```vocab.bpe``` y ```encoder.json``` que son muy importantes para que whisper pueda funcionar de manera completamente offline.
 
-- ```Descargar los archivos de internet:``` Los archivos se pueden descargar desde los siguientes links:
+- ```Descargar los modelos de Whisper AI de internet:``` Los modelos se pueden descargar desde los siguientes links:
 
     - tiny.en: https://openaipublic.azureedge.net/main/whisper/models/d3dd57d32accea0b295c96e26691aa14d8822fac7d9d27d5dc00b4ca2826dd03/tiny.en.pt
 
@@ -52,4 +52,15 @@ Una vez encontrados los archivos ya podras descargar los modelos que se encuentr
     - large-v3: https://openaipublic.azureedge.net/main/whisper/models/e5b1a55b89c1367dacf97e3e19bfd829a01529dbfdeefa8caeb59b3f1b81dadb/large-v3.pt
 
     - large: https://openaipublic.azureedge.net/main/whisper/models/e5b1a55b89c1367dacf97e3e19bfd829a01529dbfdeefa8caeb59b3f1b81dadb/large-v3.pt
+
+Hay que recordar que mientras mas grande sea el modelo a utilizar mucho mayor será el uso de recursos computacionales que tendra que usar.
+
+- ```Descargar "vocab.bpe" y encoder.json:``` Estos modelos son los que se descargan para el archivo ```openai_public.py``` y se pueden descargar de los siguientes links:
+
+    - encoder.json: https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/encoder.json
+
+    - vocab.bpe: https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/vocab.bpe
+
+- ```Implementar los modelos descargados en nuestro codigo y en nuestras librerias:``` En este caso primero sustituiremos los links que estan en el archivo de ```openai_public.py``` por el directorio en donde se encuentran los archivos ```encoder.json``` y ```vocab.bpe``` (Una recomendación es poner los archivos descargados dentro de la carpeta de whisper para tener un orden y no sea tan complicado buscar los archivos).
+
 
