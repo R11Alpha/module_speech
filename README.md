@@ -15,21 +15,21 @@ Este script funciona como un modulo básico del robot de servicio Markovito. Est
 
 - ```Whisper AI:``` Para instalar esta librería hay que copiar y pegar estos comandos en la terminal de Ubuntu.
 
-    Utilizamos Python 3.9.9 y [PyTorch](https://pytorch.org/) 1.10.1 para entrenar y probar nuestros modelos, pero se espera que la base de código sea compatible con Python 3.8-3.11 y versiones recientes de PyTorch. La base de código también depende de algunos paquetes de Python, especialmente de [OpenAI's tiktoken](https://github.com/openai/tiktoken) para su implementación de tokenizador rápido. Puedes descargar e instalar (o actualizar a) la última versión de Whisper con el siguiente comando:
+        Utilizamos Python 3.9.9 y [PyTorch](https://pytorch.org/) 1.10.1 para entrenar y probar nuestros modelos, pero se espera que la base de código sea compatible con Python 3.8-3.11 y versiones recientes de PyTorch. La base de código también depende de algunos paquetes de Python, especialmente de [OpenAI's tiktoken](https://github.com/openai/tiktoken) para su implementación de tokenizador rápido. Puedes descargar e instalar (o actualizar a) la última versión de Whisper con el siguiente comando:
 
-        pip install -U openai-whisper
+            pip install -U openai-whisper
 
-    Alternativamente, el siguiente comando descargará e instalará el último commit de este repositorio, junto con sus dependencias de Python.
+        Alternativamente, el siguiente comando descargará e instalará el último commit de este repositorio, junto con sus dependencias de Python.
 
-        pip install git+https://github.com/openai/whisper.git
+            pip install git+https://github.com/openai/whisper.git
 
-    Para actualizar el paquete a la última versión de este repositorio, por favor ejecuta:
+        Para actualizar el paquete a la última versión de este repositorio, por favor ejecuta:
 
-        pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
+            pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
 
-    También requiere que la herramienta de línea de comandos ['ffmpeg'](https://ffmpeg.org/) esté instalada en tu sistema, la cual está disponible en la mayoría de los gestores de paquetes:
+        También requiere que la herramienta de línea de comandos ['ffmpeg'](https://ffmpeg.org/) esté instalada en tu sistema, la cual está disponible en la mayoría de los gestores de paquetes:
 
-        sudo apt update && sudo apt install ffmpeg
+            sudo apt update && sudo apt install ffmpeg
 
 
 <a name="offline-whisper"></a>
