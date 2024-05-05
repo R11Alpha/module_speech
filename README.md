@@ -19,4 +19,4 @@ Para poder usar whisper completamente offline, se necesita descargar archivos ne
 ```Descargar los arhivos desde "__init__.py" y "openai_public.py":``` Todos los archivos que se mencionan se encuentran en el directorio "/.local/lib/python3.X/site-packages".
 El archivo "__init__.py" se encuentra en la carpeta de Whisper:
 
-![Image text](https://ibb.co/dDdND2S)
+![]()
