@@ -55,6 +55,8 @@ Una vez encontrados los archivos ya podras descargar los modelos que se encuentr
 
 Hay que recordar que mientras mas grande sea el modelo a utilizar mucho mayor será el uso de recursos computacionales que tendra que usar.
 
+![](https://github.com/R11Alpha/module_speech/blob/main/Resources/recursos.png  )
+
 - ```Descargar "vocab.bpe" y encoder.json:``` Estos modelos son los que se descargan para el archivo ```openai_public.py``` y se pueden descargar de los siguientes links:
 
     - encoder.json: https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/encoder.json
